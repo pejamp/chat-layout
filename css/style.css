@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --background: #1A1924;
+  --textColor-white: #E1E1E6;
+  --iconColor-white: #E1E1E6;
+  --textBox-purple: #633BBC;
+  --textBox-green: #07847E;
+  --userStatus-online: #00B37E;
+  --inputBox: #282843;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background);
+  padding: 24px 32px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.avatar__image {
+  flex: 1;
+  object-fit: cover;
+}
+
+.userInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 4px;
+}
+
+.userInfo__name {
+  font-size: 1rem;
+  color: var(--textColor-white);
+  font-weight: bold;
+}
+
+.userInfo__status {
+  font-size: 0.75rem;
+  color: var(--userStatus-online);
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+}
+
+.userInfo__status::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--userStatus-online);
+  position: absolute;
+  left: 0;
+}
+
+.closebtn {
+  width: 20px;
+  height: 20px;
+  color: var(--iconColor-white);
+  font-size: 20px;
+}
+
+.typeBox {
+  background-color: var(--inputBox);
+  margin-top: 24px;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 50px;
+}
+
+.typeBox__input {
+  flex: 1;
+  font-size: 0.75rem;
+  color: var(--textColor-white);
+  line-height: 14px;
+}
+
+.typeBox__input::placeholder {
+  color: var(--textColor-white);
+}
+
+.typeBox__button {
+  width: 24px;
+  height: 24px;
+  color: var(--iconColor-white);
+  font-size: 24px;
+}
