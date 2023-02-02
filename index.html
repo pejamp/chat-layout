@@ -4,30 +4,62 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
   <title>Chat</title>
 </head>
 <body>
-  <div class="header">
-    <div class="avatar">
-      <img class="avatar__image" src="css/images/profile.png" alt="foto de perfil">
+  <div class="container">
+    <div class="header">
+      <div class="avatar">
+        <img class="avatar__image" src="assets/images/profile.png" alt="foto de perfil">
+      </div>
+      <div class="userInfo">
+        <span class="userInfo__name">Cecilia Sassaki</span>
+        <span class="userInfo__status">Online</span>
+      </div>
+      <button class="closebtn">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
     </div>
-    <div class="userInfo">
-      <span class="userInfo__name">Cecilia Sassaki</span>
-      <span class="userInfo__status">Online</span>
+    <div class="chat" id="chat">
+      <span class="chat__time">Hoje 11:30</span>
+      <div class="chat__message chat__message--received">
+        <span class="chat__user">Cecilia - 11:30</span>
+        <div class="chat__textbox chat__textbox--received">
+          <p class="chat__text">Tive uma ideia incrível para um projeto! 😍</p>
+        </div>
+      </div>
+      <div class="chat__message chat__message--sent">
+        <span class="chat__user">Você - 11:32</span>
+        <div class="chat__textbox chat__textbox--sent">
+          <p class="chat__text">Sério? Me conta mais.</p>
+        </div>
+      </div>
+      <div class="chat__message chat__message--received">
+        <span class="chat__user">Cecilia - 11:34</span>
+        <div class="chat__textbox chat__textbox--received">
+          <p class="chat__text">E se a gente fizesse um chat moderno e responsivo em apenas uma semana?</p>
+        </div>
+      </div>
+      <div class="chat__message chat__message--sent">
+        <span class="chat__user">Você - 11:36</span>
+        <div class="chat__textbox chat__textbox--sent">
+          <p class="chat__text">#boraCodar! 🚀</p>
+        </div>
+      </div>
     </div>
-    <button class="closebtn">
-      <i class="fa-solid fa-xmark"></i>
-    </button>
+    <div class="typeContainer">
+      <div class="typeBox">
+        <input class="typeBox__input" type="text" name="message" id="message" placeholder="Digite sua mensagem" />
+        <button class="typeBox__button" id="send-btn">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </div>
+    </div>
   </div>
-  <div>CHAT</div>
-  <div class="typeBox">
-    <input class="typeBox__input" type="text" name="message" id="message" placeholder="Digite sua mensagem" />
-    <button class="typeBox__button" type="submit">
-      <i class="fa-solid fa-paper-plane"></i>
-    </button>
-  </div>
+
+  <script src="main.js"></script>
 </body>
 </html>

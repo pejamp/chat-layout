@@ -13,17 +13,26 @@
 body {
   font-family: 'Roboto', sans-serif;
   background-color: var(--background);
-  padding: 24px 32px;
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
   margin: auto;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  position: relative;
 }
 
 .header {
+  width: 100%;
+  padding: 24px 32px;
   display: flex;
   align-items: center;
   gap: 16px;
+  position: fixed;
+  background-color: var(--background);
 }
 
 .avatar {
@@ -80,9 +89,16 @@ body {
   font-size: 20px;
 }
 
+.typeContainer {
+  position: fixed;
+  bottom: 0;
+  padding: 24px 32px;
+  background-color: var(--background);
+  width: 100%;
+}
+
 .typeBox {
   background-color: var(--inputBox);
-  margin-top: 24px;
   padding: 14px 24px;
   display: flex;
   align-items: center;
@@ -106,4 +122,89 @@ body {
   height: 24px;
   color: var(--iconColor-white);
   font-size: 24px;
+}
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 30px;
+  flex: 1;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 96px;
+  padding-bottom: 100px;
+}
+
+.chat__time {
+  text-align: center;
+  align-self: center;
+  font-size: 0.75rem;
+  color: var(--textColor-white);
+}
+
+.chat__message {
+  max-width: 80%;
+}
+
+.chat__message--received {
+  align-self: flex-start;
+  text-align: start;
+}
+
+.chat__message--sent {
+  align-self: flex-end;
+  text-align: end;
+}
+
+.chat__user {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--textColor-white);
+  margin-bottom: 10px;
+}
+
+.chat__textbox {
+  padding: 14px;
+  border-radius: 8px;
+  display: inline-block;
+  word-break: break-word;
+}
+
+.chat__textbox--received {
+  border-top-left-radius: 0;
+  background-color: var(--textBox-purple);
+}
+
+.chat__textbox--sent {
+  border-bottom-right-radius: 0;
+  background-color: var(--textBox-green);
+}
+
+.chat__text {
+  font-size: 0.75rem;
+  color: var(--textColor-white);
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 880px;
+  }
+
+  .header {
+    max-width: 880px;
+    padding: 32px 0 14px 0;
+  }
+
+  .typeContainer {
+    max-width: 880px;
+    padding: 32px 0;
+  }
+
+  .chat {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 94px;
+    padding-bottom: 116px;
+  }
 }
