@@ -9,10 +9,10 @@
 </p>
 
 <h1 align="center">
-    <img alt="Music player" src="/assets/images/capa.png" />
+    <img alt="Chat" src="/assets/images/capa.png" />
 </h1>
 
-# Music Player
+# Chat
 Um Chat desenvolvido em HTML, CSS e Vanilla JS. 
 
 ## 💻 Projeto
